@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <ctime>
 using namespace std;
 
@@ -15,7 +15,6 @@ public:
         SetMonth(month);
         SetYear(year);
     }
-    //Делегирование
     Date(unsigned short day, unsigned short month) : Date(day, month, 2005) {}
 
 
@@ -23,7 +22,6 @@ public:
     {
         cout << day << "." << month << "." << year << "\n";
     }
-    //day SetGet
     void SetDay(unsigned short day)
     {
         if (day == 0 || day > 31) throw "ERROR!!! The day must be from 0 to 31 !!!";
@@ -33,7 +31,6 @@ public:
     {
         return day;
     }
-    //month SetGet
     void SetMonth(unsigned short month)
     {
         if (month == 0 || month > 12) throw "ERROR!!! The day must be from 1 to 12 !!!";
@@ -43,7 +40,6 @@ public:
     {
         return month;
     }
-    //year SetGet
     void SetYear(long long year)
     {
         this->year = year;
@@ -68,15 +64,10 @@ class Student {
     int* grade_of_exam = nullptr;
 
 public:
-    // сигнатура конструктора копирования
     Student(const Student& original)
     {
         cout << "COPY C-TOR " << this << "\n";
-        // по дефолту такой конструктор в классе присутствует в любом случае, но в теле прописаны инструкции ПОБИТОВОГО копирования всех полей оригинала, без учёта того, указатели это или нет
-        // слева от оператора = находится копия (наш текущий объект) this->
-        // справа от оператора = находится оригинал, с которого снимаются состояния
 
-        // тут пока поверхностное копирование (для полей-НЕуказателей)
         this->surname = original.surname;
         this->name = original.name;
         this->middlename = original.middlename;
@@ -86,8 +77,6 @@ public:
         this->counthomework = original.counthomework;
         this->countexam = original.countexam;
 
-        // ПРОБЛЕМА: у копии нет своих собственных динамических массивов !!!
-        // код ниже до конца метода - это ГЛУБОКОЕ КОПИРОВАНИЕ
         this->grade_of_practic = new int[original.countpractic];
         for (int i = 0; i < countpractic; i++)
         {
@@ -123,12 +112,12 @@ public:
     ~Student()
     {
         cout << "DESTRUCTOR " << this << "\n";
-        //if (grade_of_practic != nullptr)
-            //delete[] grade_of_practic;
-        //if (grade_of_homework != nullptr)
-            //delete[] grade_of_homework;
-        //if (grade_of_exam != nullptr)
-            //delete[] grade_of_exam;
+        if (grade_of_practic != nullptr)
+            delete[] grade_of_practic;
+        if (grade_of_homework != nullptr)
+            delete[] grade_of_homework;
+        if (grade_of_exam != nullptr)
+            delete[] grade_of_exam;
     }
 
     void PrintStudent() const
