@@ -1,0 +1,11 @@
+﻿  Group Student.cpp
+C:\Users\Quixar\source\repos\Group Student\Group Student.cpp(92,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Quixar\source\repos\Group Student\Group Student.cpp(98,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Quixar\source\repos\Group Student\Group Student.cpp(104,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Quixar\source\repos\Group Student\Group Student.cpp(146,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Quixar\source\repos\Group Student\Group Student.cpp(159,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Quixar\source\repos\Group Student\Group Student.cpp(176,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Quixar\source\repos\Group Student\Group Student.cpp(188,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Quixar\source\repos\Group Student\Group Student.cpp(205,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Quixar\source\repos\Group Student\Group Student.cpp(217,27): warning C4018: '<': signed/unsigned mismatch
+  Group Student.vcxproj -> C:\Users\Quixar\source\repos\Group Student\x64\Debug\Group Student.exe
